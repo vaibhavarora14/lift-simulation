@@ -1,0 +1,21 @@
+.building {
+  margin: 2rem;
+  width: 60%;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.floor {
+  border-bottom: 2px solid black;
+}
+
+.lift {
+  width: 3rem;
+  height: 3.5rem;
+  background-color: aqua;
+  display: block;
+}
