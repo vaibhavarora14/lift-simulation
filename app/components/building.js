@@ -1,8 +1,10 @@
 import Component from '@glimmer/component';
+import { floorHeight } from './floor';
 
-const buildingHeight = "500";
-const floorHeight = "100";
+const numberOfFloors = 5;
 
 export default class BuildingComponent extends Component {
-    numberOfFloors = new Array(buildingHeight / floorHeight);
+    numberOfFloors = Array(numberOfFloors);
+    floorHeight = floorHeight;
 }
+

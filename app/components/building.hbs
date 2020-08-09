@@ -1,5 +1,6 @@
 <div class="building">
     {{#each this.numberOfFloors}}
-    <Floor style="height: 100px;" />
+    <Floor style="height: {{this.floorHeight}}px" />
     {{/each}}
+    {{yield}}
 </div>

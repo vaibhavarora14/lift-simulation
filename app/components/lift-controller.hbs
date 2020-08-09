@@ -1,0 +1,6 @@
+<span {{did-insert this.updatePosition}}>
+    {{#each this.liftPositions as | position |}}
+    <Lift style="left: {{position}}px; bottom: 10px; height: {{this.liftHeight}}px" />
+    {{/each}}
+    {{yield}}
+</span>
