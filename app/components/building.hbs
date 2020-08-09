@@ -1,6 +1,17 @@
 <div class="building">
-    {{#each this.numberOfFloors}}
-    <Floor style="height: {{this.floorHeight}}px" />
+    {{#each this.numberOfFloors as | number index |}}
+    <Floor style="height: {{this.floorHeight}}px;">
+        <span style="display: flex; flex-direction: column; height: inherit; justify-content:center">
+            {{#if (not-eq index 0)}}
+            <Button
+                style="margin-right: auto; margin-bottom: 0.5rem; width: 4rem; background-color: lightgreen">Up</Button>
+            {{/if}}
+
+            {{#if (not-eq index 4)}}
+            <Button style="margin-right: auto; width: 4rem;background-color: orange">Down</Button>
+            {{/if}}
+        </span>
+    </Floor>
     {{/each}}
     {{yield}}
 </div>

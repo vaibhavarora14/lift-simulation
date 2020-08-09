@@ -7,7 +7,7 @@ const LIFT_COUNT = 3;
 
 const getLiftStartPositions = (totalWidth, countOfLift) => {
     const distanceBetweenLifts = totalWidth / countOfLift;
-    let startingPoint = 50;
+    let startingPoint = 100;
     const data = Array.from(Array(countOfLift), () => {
         const returnValue = startingPoint;
         startingPoint += distanceBetweenLifts

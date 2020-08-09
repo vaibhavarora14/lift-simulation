@@ -21,3 +21,15 @@
   position: absolute;
   transition: 1s;
 }
+
+.button {
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.2rem;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
