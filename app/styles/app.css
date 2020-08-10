@@ -30,6 +30,6 @@
   cursor: pointer;
 }
 
-.button:hover {
+.button:not(:disabled):hover {
   transform: scale(1.1);
 }

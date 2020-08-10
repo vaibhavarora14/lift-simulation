@@ -1,6 +1,6 @@
-<span {{did-insert this.updatePosition}}>
+<span {{did-insert this.updatePosition}} {{did-insert this.updateLiftTopPosition}}>
     {{#each this.liftPositions as | position |}}
-    <Lift style="left: {{position}}px; bottom: 10px; height: {{this.liftHeight}}px" />
+    <Lift style="left: {{position}}px; top: {{this.liftTopPosition}}px; height: {{this.liftHeight}}px" />
     {{/each}}
     {{yield}}
 </span>

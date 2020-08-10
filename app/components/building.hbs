@@ -1,14 +1,15 @@
 <div class="building">
     {{#each this.numberOfFloors as | number index |}}
-    <Floor style="height: {{this.floorHeight}}px;">
+    <Floor id="floor_{{index}}" style="height: {{this.floorHeight}}px;">
         <span style="display: flex; flex-direction: column; height: inherit; justify-content:center">
             {{#if (not-eq index 0)}}
-            <Button
-                style="margin-right: auto; margin-bottom: 0.5rem; width: 4rem; background-color: lightgreen">Up</Button>
+            <Button style="margin-right: auto; margin-bottom: 0.5rem; width: 4rem; background-color: lightgreen"
+                {{on "click" (fn this.moveLiftUp (concat 'floor_' index))}}>Up</Button>
             {{/if}}
 
             {{#if (not-eq index 4)}}
-            <Button style="margin-right: auto; width: 4rem;background-color: orange">Down</Button>
+            <Button disabled style="margin-right: auto; width: 4rem;background-color: orange"
+                {{on "click" (fn this.moveLiftDown (concat 'floor_' index))}}>Down</Button>
             {{/if}}
         </span>
     </Floor>
